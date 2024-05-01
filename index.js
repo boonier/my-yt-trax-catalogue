@@ -39,8 +39,8 @@ const trackLog = (track, full = false) => {
     const html = pug.renderFile("./index.pug", {
       pretty: true,
       tracks: tracks,
-      title: "yt trax scrape",
-      date: new Date().toLocaleDateString("de-DE"),
+      title: "trax scrape",
+      date: new Date().toLocaleDateString("en-GB"),
     });
 
     fs.writeFileSync("index.html", html);
