@@ -1,0 +1,45 @@
+body {
+  background-color: #bbb;
+  font-family: sans-serif;
+  color: #666;
+  font-size: 11px;
+}
+img {
+  width: 50px;
+  height: auto;
+}
+h1 {
+  font-size: 16px;
+}
+td {
+  padding: 6px;
+}
+.thumb {
+  width: 50px;
+  height: auto;
+}
+.date {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #eee;
+}
+.img {
+  width: 5%;
+}
+.title {
+  width: 20%;
+}
+.link {
+  width: 5%;
+}
+.description {
+  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

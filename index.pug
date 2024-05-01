@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='./style.css')
+  body
+    h1= title
+    p.date Scraped on #{date}
+    #container.col
+      table
+        each track in tracks
+          tr
+            td.img
+              if track.snippet.thumbnails.medium
+                image(class='thumb', src=track.snippet.thumbnails.medium.url)
+              else
+                image(class='thumb no-image')
+            td.title= track.snippet.title
+            td.link
+              a(href=`https://www.youtube.com/watch?v=${track.snippet.resourceId.videoId}`) Link
+            td.description= track.snippet.description
