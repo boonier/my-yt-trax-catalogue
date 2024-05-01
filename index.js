@@ -1,6 +1,9 @@
 import fetch from "node-fetch";
 import fs from "fs";
 import pug from "pug";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const trackLog = (track, full = false) => {
   if (full) {
@@ -15,8 +18,8 @@ const trackLog = (track, full = false) => {
 (async () => {
   try {
     const params = new URLSearchParams({
-      playlistId: "PLB9B0774DDF57CFAB",
-      key: "AIzaSyD5UqPULDxbVVzi05fQImaKeRXlVCELb9o",
+      playlistId: process.env.PLAYLIST_ID,
+      key: process.env.YT_KEY,
       maxResults: 300,
       part: "snippet",
     });
@@ -28,6 +31,7 @@ const trackLog = (track, full = false) => {
     const data = await res.json();
     const tracks = data.items;
 
+    // console.log(tracks.length);
     // for (let track of tracks) {
     //   trackLog(track);
     // }
